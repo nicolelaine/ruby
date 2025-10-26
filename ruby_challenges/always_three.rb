@@ -11,3 +11,10 @@ number1 -= input
 puts number1
 
 
+=begin
+
+puts "Give me a number"
+number1 = (((((input = gets.chomp.to_i) + 5) * 2) - 4) / 2) - input
+puts number1
+
+=end 
