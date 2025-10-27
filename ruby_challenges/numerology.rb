@@ -1,3 +1,4 @@
+=begin
 puts "What is your date of birth, in MMDDYYYY, please"
 birthdate = gets.chomp
 
@@ -9,5 +10,26 @@ if number > 9
 end
 
 puts "Your life path number is #{number}!"
+=end 
 
 
+
+puts "What is your date of birth, in MMDDYYYY, please"
+birthdate = gets.chomp
+
+def path_number(birthdate)
+number = birthdate[0].to_i + birthdate[1].to_i + birthdate[2].to_i + birthdate[3].to_i + birthdate[4].to_i + birthdate[5].to_i + birthdate[6].to_i + birthdate[7].to_i 
+
+if number > 9
+    number = number.to_s
+    number = number[0].to_i + number[1].to_i    
+end
+   return number 
+end 
+
+def display_message(birthdate)
+birth_path_number = path_number(birthdate)
+puts "Your life path number is #{birth_path_number}!"
+end 
+
+display_message(birthdate)
